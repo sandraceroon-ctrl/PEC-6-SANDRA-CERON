@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Contacto | Playerz</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/base.css">
+        <link rel="stylesheet" href="CSS/componentes.css">
+        <link rel="stylesheet" href="CSS/paginas.css">
+        <script src="JS/menu.js" defer></script>
+    </head>
+    <body class="contacto">
+        <header>
+            <div class="w">
+                <a href="index.html"><b>Playerz</b></a>
+                <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav id="menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="productos.html">Colecciones</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="historia.html">Historia</a></li>
+                        <li><a class="btn" href="contacto.html">contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="w split">
+                <div>
+                    <h1>¡Conectemos!</h1>
+                    <p>¿No encuentras lo que necesitas?</p>
+                    <p>Rellena el formulario y nos pondremos en contacto contigo.</p>
+                    <h2>Formulario</h2>
+                    <form action="#" method="post">
+                        <div class="row">
+                            <div>
+                                <label for="n">Nombre</label>
+                                <input id="n" name="nombre" placeholder="Jane" required>
+                            </div>
+                            <div>
+                                <label for="a">Apellido</label>
+                                <input id="a" name="apellido" placeholder="Smitherton">
+                            </div>
+                        </div>
+                        <label for="e">Correo Electrónico</label>
+                        <input id="e" type="email" name="email" placeholder="email@janesfakedomain.net" required>
+                        <label for="m">¿Cómo te podemos ayudar?</label>
+                        <textarea id="m" name="mensaje" rows="5" placeholder="Enter your question or message"></textarea>
+                        <button class="btn full" type="submit">Enviar</button>
+                    </form>
+                </div>
+                <img src="img/contacto.jpg" alt="Bola 8 de billar">
+            </section>
+        </main>
+
+        <footer>
+            <div class="w">
+                <div>
+                    Playerz
+                    <p>Facebook · Instagram</p>
+                </div>
+                <div>
+                    <b>FAQ</b>
+                    <a href="#">Marcas</a>
+                </div>
+                <div>
+                    <b>Contacto</b>
+                    <a href="#">Clientes</a>
+                </div>
+                <div>
+                    <b>Novedades</b>
+                    <a href="#">Playerz Club</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
