@@ -1,4 +1,3 @@
-/* 1. Menú hamburguesa (móvil y pantallas pequeñas) */
 function menuHamburguesa() {
     const boton = document.querySelector('.menu-toggle');
     const menu = document.getElementById('menu');
@@ -17,7 +16,6 @@ function menuHamburguesa() {
         abrirCerrar(!menu.classList.contains('abierto'));
     });
 
-    // Se cierra al elegir un enlace, al pulsar Escape o al agrandar la ventana
     menu.addEventListener('click', function (evento) {
         if (evento.target.closest('a')) {
             abrirCerrar(false);
@@ -37,7 +35,6 @@ function menuHamburguesa() {
     });
 }
 
-/* 2. El menú se oculta al bajar y reaparece al subir */
 function ocultarMenuAlScroll() {
     const header = document.querySelector('header');
     const menu = document.getElementById('menu');
@@ -76,11 +73,9 @@ function ocultarMenuAlScroll() {
 menuHamburguesa();
 ocultarMenuAlScroll();
 
-/* 3. Los elementos con la clase "aparecer" se muestran poco a poco al hacer scroll */
 function aparecerAlHacerScroll() {
     const elementos = document.querySelectorAll('.aparecer');
 
-    // Si el navegador no soporta IntersectionObserver, todo se queda visible
     if (!elementos.length || !('IntersectionObserver' in window)) {
         return;
     }

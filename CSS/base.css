@@ -54,7 +54,6 @@ p {
     font-size: 15px;
 }
 
-/* Layout */
 .w {
     max-width: 1100px;
     margin: 0 auto;
@@ -117,7 +116,6 @@ section {
     margin-bottom: 14px;
 }
 
-/* Tablet */
 @media (max-width: 1024px) {
     .grid3 {
         grid-template-columns: repeat(2, 1fr);
@@ -128,7 +126,6 @@ section {
     }
 }
 
-/* Móvil */
 @media (max-width: 760px) {
     .w {
         padding: 0 20px;
