@@ -24,6 +24,16 @@
     margin-bottom: 14px;
 }
 
+@media (min-width: 1025px) {
+    .home .split img {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+.home main > section:nth-of-type(4) {
+    padding-top: 96px;
+}
+
 /* ---------- Historia ---------- */
 .historia h1 {
     margin-bottom: 32px;
@@ -33,7 +43,7 @@
     max-width: 900px;
 }
 
-.historia img[src*="sanger"] {
+.historia img[src*="casa"] {
     aspect-ratio: 2 / 1;
     margin-top: 40px;
 }
@@ -43,9 +53,10 @@
     padding-top: 0;
 }
 
-.historia img[src*="manuel"],
-.historia img[src*="sandra"] {
+.historia .nosotros img {
     aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center top;
 }
 
 /* ---------- Servicios ---------- */
@@ -174,9 +185,13 @@
     }
 
     .home img[src*="kariba"],
-    .historia img[src*="sanger"] {
+    .historia img[src*="casa"] {
         aspect-ratio: 4 / 3;
         margin-top: 24px;
+    }
+
+    .home main > section:nth-of-type(4) {
+        padding-top: 64px;
     }
 
     .servicios .hero {

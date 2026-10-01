@@ -75,3 +75,35 @@ function ocultarMenuAlScroll() {
 
 menuHamburguesa();
 ocultarMenuAlScroll();
+
+/* 3. Los elementos con la clase "aparecer" se muestran poco a poco al hacer scroll */
+function aparecerAlHacerScroll() {
+    const elementos = document.querySelectorAll('.aparecer');
+
+    // Si el navegador no soporta IntersectionObserver, todo se queda visible
+    if (!elementos.length || !('IntersectionObserver' in window)) {
+        return;
+    }
+
+    const observador = new IntersectionObserver(function (entradas) {
+        let orden = 0;
+
+        entradas.forEach(function (entrada) {
+            if (!entrada.isIntersecting) {
+                return;
+            }
+
+            // Si varias tarjetas entran a la vez, aparecen una detrás de otra
+            entrada.target.style.transitionDelay = (orden * 0.15) + 's';
+            entrada.target.classList.remove('oculta');
+            observador.unobserve(entrada.target);
+            orden++;
+        });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    elementos.forEach(function (elemento) {
+        elemento.classList.add('oculta');
+        observador.observe(elemento);
+    });
+}
+
