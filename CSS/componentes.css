@@ -242,6 +242,14 @@ footer a {
     color: var(--mute);
     margin-top: 12px;
 }
+footer p a {
+    display: inline;
+    margin-top: 0;
+}
+
+footer a:hover {
+    color: var(--ink);
+}
 
 footer b {
     font-weight: 500;
@@ -321,4 +329,107 @@ footer b {
     opacity: 1;
     transform: none;
     }
+}
+/* =========================
+   CARRUSEL KARIBA
+========================= */
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.6s ease;
+    will-change: transform;
+}
+
+.carousel-track img {
+    flex: 0 0 100%;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+/* animación desktop */
+@keyframes slide {
+    0%   { transform: translateX(0%); }
+    15%  { transform: translateX(0%); }
+
+    20%  { transform: translateX(-100%); }
+    35%  { transform: translateX(-100%); }
+
+    40%  { transform: translateX(-200%); }
+    55%  { transform: translateX(-200%); }
+
+    60%  { transform: translateX(-300%); }
+    75%  { transform: translateX(-300%); }
+
+    80%  { transform: translateX(-400%); }
+    95%  { transform: translateX(-400%); }
+
+    100% { transform: translateX(0%); }
+}
+
+/* =========================
+   RESPONSIVE CARRUSEL
+========================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .carousel-track img {
+        aspect-ratio: 4 / 3;
+    }
+
+    .carousel-track {
+        animation-duration: 20s;
+    }
+}
+
+/* MÓVIL */
+@media (max-width: 760px) {
+    .carousel {
+        margin-top: 24px;
+    }
+
+    .carousel-track img {
+        aspect-ratio: 4 / 3;
+    }
+
+    .carousel-track {
+        animation-duration: 18s;
+    }
+}
+
+/* MÓVIL PEQUEÑO */
+@media (max-width: 480px) {
+    .carousel-track img {
+        aspect-ratio: 1 / 1;
+    }
+
+    .carousel-track {
+        animation-duration: 16s;
+    }
+}
+
+.carousel img {
+    border-radius: 8px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

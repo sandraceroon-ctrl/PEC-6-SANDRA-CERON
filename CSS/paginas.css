@@ -8,14 +8,6 @@
     margin-top: 40px;
 }
 
-.home .split h3 + p {
-    margin: 6px 0 20px;
-}
-
-.home .split p:last-child {
-    margin-bottom: 0;
-}
-
 .home .resenas {
     padding-top: 96px;
 }
@@ -35,6 +27,16 @@
 }
 
 /* ---------- Historia ---------- */
+.historia .subrayado {
+    background: linear-gradient(currentColor, currentColor) no-repeat left bottom / 0 0.1em;
+    animation: subrayar 0.9s ease-out 0.4s forwards;
+}
+
+@keyframes subrayar {
+    to {
+        background-size: 100% 0.1em;
+    }
+}
 .historia h1 {
     margin-bottom: 32px;
 }
@@ -180,29 +182,36 @@
 
 /* ---------- Móvil ---------- */
 @media (max-width: 760px) {
-    .home .resenas {
-        padding-top: 64px;
-    }
 
-    .home img[src*="kariba"],
-    .historia img[src*="casa"] {
-        aspect-ratio: 4 / 3;
-        margin-top: 24px;
-    }
+   .home .split {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 
-    .home main > section:nth-of-type(4) {
-        padding-top: 64px;
-    }
+.home .split > div {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
 
-    .servicios .hero {
-        padding: 64px 20px;
-    }
+.home .split h2 {
+    font-size: 22px;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
 
-    .contacto img {
-        aspect-ratio: 4 / 3;
-    }
+.home .split h3 {
+    font-size: 15px;
+    margin: 0;
+    opacity: 1;
+}
 
-    .contacto h2 {
-        margin-top: 32px;
-    }
+.home .split p {
+    font-size: 14px;
+    margin: 0;
+    color: var(--mute);
+}
 }
